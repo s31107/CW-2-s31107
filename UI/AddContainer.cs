@@ -17,7 +17,7 @@ public class AddContainer : IUiOption
         }
         double height, weight, depth, maximumLoad;
         var index = ConsoleDialog.GetIntStrategy($"{dialog}\n=> ", false);
-        if (index > containers.Count || index < 0) return;
+        if (index > containersName.Length || index < 0) return;
         switch (containersName[index])
         {
             case "Gas Container":

@@ -26,7 +26,8 @@ public class PackCargoToContainer : IUiOption
                 break;
             case ILoadable<LiquidCargo> liquidContainer:
                 liquidContainer.Load(new LiquidCargo(
-                    ConsoleDialog.GetIntStrategy("Insert is dangerous:\n=> ", true) == 1, 
+                    ConsoleDialog.GetStringStrategy("Insert is dangerous:\n(true/false)=> ").Equals(
+                        "true", StringComparison.OrdinalIgnoreCase), 
                     ConsoleDialog.GetDoubleStrategy("Insert cargo weight:\n=> ", false), 
                     ConsoleDialog.GetStringStrategy("Insert cargo type:\n=> ")));
                 break;

@@ -15,6 +15,7 @@ public class LiquidContainer(double height, double containerWeight, double depth
         Weight = 0;
         var cargosTemp = new List<LiquidCargo>(_cargos);
         _cargos.Clear();
+        IsDangerous = false;
         return cargosTemp;
     }
     
